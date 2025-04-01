@@ -1,0 +1,87 @@
+What is github?
+-----------------
+
+distributed version control and source code management (SCM) functionality of Git.
+
+
+Examples for communicators?
+
+→ Teams, Slack, skype for business, etc
+
+
+Source code management tools list
+—---------------------------------
+Github
+Bitbucket
+Gitlab
+
+Svn[sub version]
+TVS
+CFS
+
+
+
+ADMINSTRATION
+=============
+
+
+step 1: create a github account
+
+    mail id: kkeducationblr@gmail.com
+
+    pwd: P@a
+
+    uname: kkeducation1234567
+
+    public url:                   https://github.com/
+
+    enterprise edition:           https://airtel.github.com/ 
+
+
+
+
+step 2: login into github
+
+
+step 3: create an organization
+
+
+  org name: bsnl-4g-test
+
+  kkeducationblr@gmail.com(x), prasanth@bsnl.com (x),  service account mail : devops4g@bsnl.com
+
+
+
+
+
+
+
+
+step 4: create a repository
+
+
+   private: https://github.com/bsnl-4g-test/testing-private-repo
+
+   public repo: https://github.com/bsnl-4g-test/testing-public-repo
+
+
+step 5: create a team
+
+
+    dev : bsnl-dev-team
+
+    DevOps : bsnl-DevOps-Team
+
+
+
+step 6: add users to team(dev, DevOps, SRE, QA, DB, etc)
+
+
+step 7: give repo access to team..
+
+
+conversion: public <---> private
+
+
+step 8: deleted user, team, repo, org
+
