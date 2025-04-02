@@ -1,0 +1,102 @@
+DAY 2
+-----
+
+Git commands
+—-----------------
+
+step 0: pls install gitbash
+Step 1: check the version of git
+   git --version or git -v
+
+Step 2: In desktop , create jio folder.  [cd onedrive/desktop]
+Step 3: git init  [create a empty local repo]
+Step 4:  ls -la
+Step 5: cd .git , ls -lrth
+Step 6: cd ..
+
+Why DevOps Engineer required git?
+—--------------------------------
+Ans: As a DevOps Engineer , we need to write few scripts, YAML files.
+
+IDE [Integrated Development Environment]
+----
+Eclipse
+Myeclipse
+Intellij
+Netbeans
+VS code
+Pycharm
+Atom
+
+Untracked files:
+Working area              staging area                 local repo
+—----------------         —-------------              —-----------
+Billing.java—----------->                  —---------->
+Test.java   [git add . ]                    git commit -m “msg”
+
+
+
+git status
+—--------
+To see the status of files
+
+Vi Test3.java
+
+Before commit
+-------------
+
+git config --global --list  —-> Too see the uname and mail id.
+
+git config --global user.name "kkdevopsonline"
+git config --global user.email  "prasanthdevops123@gmail.com"
+
+
+→git add .
+→git add *
+→ git add Filename1 Filename2
+—> git add *.java
+—> git add *.py
+
+
+How to see the commit history?
+
+→ git log 
+→ git log -2  [To see the last 2 commits] or git log -n 2
+
+
+
+How to see many repos are mapped?
+
+git remote -v --> to see the alias name
+
+How to connect to a remote repository?
+
+→ git remote add jio(aliase name) <repo url>
+→ git remote add jio https://github.com/kkdevopsonline/test.git
+
+→ git push jio master
+
+NOTE: Generate a PAT : 
+
+
+IQ: Is it possible to remove alias name?
+Ans: Yes
+
+     git remote remove jio
+
+  
+
+
+IQ] How to move files from working area to local repo directly?
+
+ANS: git commit -a -m “updated code”
+NOTE: for new file it is not possible
+
+IQ: Where the credentials are stored ?
+Ans: for windows → credentials manager
+         For MAC     —> KeyChainAccess
+
+IQ: How many files committed for one commit how to see?
+
+ANS: git show commit_id
+   —>    git show --pretty="" --name-only 93bc19a84166ce6ff1ad4e230f990ca05caf0150 [use this in real time]
