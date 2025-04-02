@@ -1,102 +1,170 @@
-DAY 2
------
 
-Git commands
-—-----------------
+# ✅ Day 2 - Git Commands & Concepts
 
-step 0: pls install gitbash
-Step 1: check the version of git
-   git --version or git -v
+## 🔧 Step-by-Step Git Setup
 
-Step 2: In desktop , create jio folder.  [cd onedrive/desktop]
-Step 3: git init  [create a empty local repo]
-Step 4:  ls -la
-Step 5: cd .git , ls -lrth
-Step 6: cd ..
+### Step 0: Install Git Bash  
+> Download from: [https://git-scm.com/](https://git-scm.com/)
 
-Why DevOps Engineer required git?
-—--------------------------------
-Ans: As a DevOps Engineer , we need to write few scripts, YAML files.
+### Step 1: Check Git Version
+```bash
+git --version
+# or
+git -v
+```
 
-IDE [Integrated Development Environment]
-----
-Eclipse
-Myeclipse
-Intellij
-Netbeans
-VS code
-Pycharm
-Atom
+### Step 2: Create Project Folder
+```bash
+cd ~/OneDrive/Desktop
+mkdir jio
+cd jio
+```
 
-Untracked files:
-Working area              staging area                 local repo
-—----------------         —-------------              —-----------
-Billing.java—----------->                  —---------->
-Test.java   [git add . ]                    git commit -m “msg”
+### Step 3: Initialize Git Repo
+```bash
+git init
+```
 
+### Step 4: View Hidden Files
+```bash
+ls -la
+```
 
+### Step 5: Explore `.git` Directory
+```bash
+cd .git
+ls -lrth
+cd ..
+```
 
+---
+
+## ❓ Why DevOps Engineers Need Git?
+
+As a **DevOps Engineer**, version control is crucial because:
+- We often work with **scripts**, **YAML files**, **Terraform**, etc.
+- Team collaboration needs **code versioning** and **rollback options**.
+- Git enables **CI/CD integration** using tools like Jenkins, GitHub Actions, etc.
+
+---
+
+## 🧠 IDEs (Integrated Development Environments)
+
+Some common IDEs used:
+- Eclipse
+- MyEclipse
+- IntelliJ
+- NetBeans
+- VS Code ✅
+- PyCharm
+- Atom
+
+---
+
+## 🔁 Git Stages Overview
+
+```plaintext
+Untracked → Staging → Local Repo
+
+Billing.java   -------->
+Test.java     [git add .]  ------>   git commit -m "initial commit"
+```
+
+---
+
+## 📌 Important Git Commands
+
+### 1. Check File Status
+```bash
 git status
-—--------
-To see the status of files
+```
 
-Vi Test3.java
+### 2. Create a New File
+```bash
+vi Test3.java
+```
 
-Before commit
--------------
-
-git config --global --list  —-> Too see the uname and mail id.
+### 3. Configure Git Identity
+```bash
+git config --global --list
 
 git config --global user.name "kkdevopsonline"
-git config --global user.email  "prasanthdevops123@gmail.com"
+git config --global user.email "prasanthdevops123@gmail.com"
+```
 
+### 4. Add Files to Staging
+```bash
+git add .                # Add all files
+git add *                # Add all files (excluding hidden ones)
+git add Filename1 Filename2
+git add *.java
+git add *.py
+```
 
-→git add .
-→git add *
-→ git add Filename1 Filename2
-—> git add *.java
-—> git add *.py
+---
 
+## 🧾 View Commit History
+```bash
+git log
+git log -2         # Last 2 commits
+git log -n 2
+```
 
-How to see the commit history?
+---
 
-→ git log 
-→ git log -2  [To see the last 2 commits] or git log -n 2
+## 🌐 Git Remote Management
 
+### Check Connected Remotes
+```bash
+git remote -v
+```
 
+### Add Remote Repository
+```bash
+git remote add jio https://github.com/kkdevopsonline/test.git
+```
 
-How to see many repos are mapped?
+### Push Code to Remote Repo
+```bash
+git push jio master
+```
 
-git remote -v --> to see the alias name
+✅ **Note:** You must generate a **PAT (Personal Access Token)** from GitHub for secure push.
 
-How to connect to a remote repository?
+---
 
-→ git remote add jio(aliase name) <repo url>
-→ git remote add jio https://github.com/kkdevopsonline/test.git
+## ❓ Interview Q&A
 
-→ git push jio master
+### Q1: Can you remove a Git remote alias?
+**Ans:** Yes
+```bash
+git remote remove jio
+```
 
-NOTE: Generate a PAT : 
+---
 
+### Q2: How to skip `git add` for modified files?
+**Ans:** Use:
+```bash
+git commit -a -m "Updated code"
+```
+🔴 Note: This works **only for tracked files**, not new ones.
 
-IQ: Is it possible to remove alias name?
-Ans: Yes
+---
 
-     git remote remove jio
+### Q3: Where are credentials stored?
+- **Windows:** Credential Manager  
+- **macOS:** Keychain Access
 
-  
+---
 
+### Q4: How to view files changed in a specific commit?
+```bash
+git show --pretty="" --name-only <commit_id>
+```
 
-IQ] How to move files from working area to local repo directly?
+🧠 Example:
+```bash
+git show --pretty="" --name-only 93bc19a84166ce6ff1ad4e230f990ca05caf0150
+```
 
-ANS: git commit -a -m “updated code”
-NOTE: for new file it is not possible
-
-IQ: Where the credentials are stored ?
-Ans: for windows → credentials manager
-         For MAC     —> KeyChainAccess
-
-IQ: How many files committed for one commit how to see?
-
-ANS: git show commit_id
-   —>    git show --pretty="" --name-only 93bc19a84166ce6ff1ad4e230f990ca05caf0150 [use this in real time]
