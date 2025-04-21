@@ -10,6 +10,8 @@
 
 📌 **Note**: `git add *` skips files like `.env`, `.gitignore`, etc.
 
+
+
 ---
 
 ## 🧹 How to Remove Files from the Working Area?
@@ -20,6 +22,7 @@ git clean -f   # ❌ Delete untracked files
 ```
 
 ⚠️ **Note**: Only **untracked** (new) files are deleted. **Modified** files remain untouched.
+
 
 ---
 
@@ -32,16 +35,19 @@ git reset <filename>    # 🎯 Moves specific file back to working area
 
 ---
 
+
 ## ❌ Revert a Bad Commit (App not working)
 
 ```bash
 git revert <commit-id>
 ```
 
+
 🧯 This creates a new commit that **undoes** the changes from the specified commit.  
 📌 It does **not** affect the remote repo unless pushed.
 
 ---
+
 
 ## 🧼 Delete Updated Code in Remote Repo
 
@@ -50,6 +56,7 @@ git revert <commit-id>
 ```bash
 git push origin master
 ```
+
 
 This will overwrite the remote changes with your local repo.
 
@@ -63,6 +70,7 @@ This will overwrite the remote changes with your local repo.
 | `git revert`  | Creates a **new commit** that reverts previous changes |
 
 ---
+
 
 ## 🚫 What is a `.gitignore` File?
 
@@ -78,12 +86,3 @@ node_modules/
 
 ✅ Helps avoid pushing unnecessary or sensitive files into the repository.
 
----
-
-📝 **Tip**: Always commit your `.gitignore` file first in a new repo!
-
-```
-
----
-
-Let me know if you'd like a downloadable version (`.md` file) or want to add a GitHub-friendly TOC (Table of Contents)!
