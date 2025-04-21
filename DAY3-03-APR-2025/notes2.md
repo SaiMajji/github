@@ -1,8 +1,4 @@
-No worries at all! Here's your final, clean, and well-formatted **`.md` (Markdown)** file, ready to be uploaded to GitHub:
 
----
-
-```markdown
 # 🧠 Git Interview Q&A
 
 ## 🔄 Difference between `git add .` and `git add *`
